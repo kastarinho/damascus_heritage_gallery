@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact & Connect - Damascus Heritage Gallery</title>
+    <meta name="description" content="Connect with us to continue the conversation around Syrian cultural preservation, educational collaborations, and heritage dialogue." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fdamascush6833back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-accent/20">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="heritage_homepage.html" class="flex items-center space-x-3">
+                        <svg class="w-8 h-8 text-accent" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2L4 8v16l12 6 12-6V8L16 2zm0 2.5L25.5 9 16 13.5 6.5 9 16 4.5zM6 10.5l9 4.5v11l-9-4.5v-11zm11 16v-11l9-4.5v11L17 26.5z"/>
+                            <circle cx="16" cy="16" r="2" fill="currentColor"/>
+                        </svg>
+                        <span class="font-crimson text-xl font-semibold text-primary">Damascus Heritage</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="heritage_homepage.html" class="text-secondary-600 hover:text-primary transition-colors duration-300 px-1 py-2">Home</a>
+                    <a href="master_gallery.html" class="text-secondary-600 hover:text-primary transition-colors duration-300 px-1 py-2">Gallery</a>
+                    <a href="artist_s_journey.html" class="text-secondary-600 hover:text-primary transition-colors duration-300 px-1 py-2">Artist's Journey</a>
+                    <a href="damascene_traditions.html" class="text-secondary-600 hover:text-primary transition-colors duration-300 px-1 py-2">Traditions</a>
+                    <a href="interactive_timeline.html" class="text-secondary-600 hover:text-primary transition-colors duration-300 px-1 py-2">Timeline</a>
+                    <a href="preservation_legacy.html" class="text-secondary-600 hover:text-primary transition-colors duration-300 px-1 py-2">Legacy</a>
+                    <a href="contact_connect.html" class="text-primary font-medium border-b-2 border-accent px-1 py-2">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2 rounded-lg hover:bg-surface transition-colors duration-300" id="mobile-menu-btn">
+                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-surface rounded-lg mt-2">
+                    <a href="heritage_homepage.html" class="block px-3 py-2 text-secondary-600 hover:text-primary hover:bg-accent/5 rounded-md transition-colors duration-300">Home</a>
+                    <a href="master_gallery.html" class="block px-3 py-2 text-secondary-600 hover:text-primary hover:bg-accent/5 rounded-md transition-colors duration-300">Gallery</a>
+                    <a href="artist_s_journey.html" class="block px-3 py-2 text-secondary-600 hover:text-primary hover:bg-accent/5 rounded-md transition-colors duration-300">Artist's Journey</a>
+                    <a href="damascene_traditions.html" class="block px-3 py-2 text-secondary-600 hover:text-primary hover:bg-accent/5 rounded-md transition-colors duration-300">Traditions</a>
+                    <a href="interactive_timeline.html" class="block px-3 py-2 text-secondary-600 hover:text-primary hover:bg-accent/5 rounded-md transition-colors duration-300">Timeline</a>
+                    <a href="preservation_legacy.html" class="block px-3 py-2 text-secondary-600 hover:text-primary hover:bg-accent/5 rounded-md transition-colors duration-300">Legacy</a>
+                    <a href="contact_connect.html" class="block px-3 py-2 text-primary font-medium bg-accent/10 rounded-md">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Featured Artwork -->
+    <section class="relative pt-24 pb-16 bg-gradient-to-br from-primary/10 to-accent/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="mb-6">
+                        <p class="font-amiri text-accent text-xl mb-2">استمرار الحوار الثقافي</p>
+                        <h1 class="font-crimson text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6">
+                            Contact & Connect
+                        </h1>
+                    </div>
+                    <p class="text-xl text-secondary-700 leading-relaxed mb-8">
+                        Continue the conversation around Syrian cultural preservation, share your own heritage stories, 
+                        or explore opportunities for educational collaboration and cultural dialogue.
+                    </p>
+                    <div class="bg-white/80 backdrop-blur-sm p-6 rounded-lg border-l-4 border-accent">
+                        <h3 class="font-semibold text-primary mb-2">Building Cultural Bridges</h3>
+                        <p class="text-secondary-600">
+                            Every message you share helps strengthen the connection between traditional Damascus artistry 
+                            and contemporary cultural preservation efforts.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <div class="artwork-card overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Damascus Community Connection" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.pexels.com/photos/1266808/pexels-photo-1266808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 right-6 text-white">
+                            <h3 class="font-crimson text-2xl font-bold mb-2">Spirit of Connection</h3>
+                            <p class="text-white/90">Traditional courtyard gatherings that inspire our community building today</p>
+                        </div>
+                    </div>
+                    <!-- Decorative geometric border elements -->
+                    <div class="absolute -top-4 -right-4 w-16 h-16 border-4 border-accent/30 rounded-lg transform rotate-12"></div>
+                    <div class="absolute -bottom-4 -left-4 w-12 h-12 border-2 border-primary/30 rounded-full"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Contact Content -->
+    <section class="py-20 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Main Contact Form -->
+                <div class="lg:col-span-2">
+                    <div class="card">
+                        <div class="mb-8">
+                            <h2 class="font-crimson text-3xl font-bold text-primary mb-4">Share Your Message</h2>
+                            <p class="text-secondary-600 leading-relaxed">
+                                Whether you're interested in the artwork, cultural heritage, educational partnerships, 
+                                or sharing your own Damascus memories, we'd love to hear from you.
+                            </p>
+                        </div>
+
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-semibold text-secondary-700 mb-2">
+                                        Full Name *
+                                    </label>
+                                    <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-secondary-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 bg-white" placeholder="Your full name" />
+                                    <span class="error-message text-red-800 text-sm hidden">Please enter your name</span>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-semibold text-secondary-700 mb-2">
+                                        Email Address *
+                                    </label>
+                                    <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-secondary-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 bg-white" placeholder="your.email@example.com" />
+                                    <span class="error-message text-red-800 text-sm hidden">Please enter a valid email address</span>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="subject" class="block text-sm font-semibold text-secondary-700 mb-2">
+                                    Subject *
+                                </label>
+                                <select id="subject" name="subject" required class="w-full px-4 py-3 border border-secondary-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 bg-white appearance-none">
+                                    <option value>Select a topic...</option>
+                                    <option value="artwork-inquiry">Artwork & Collection Inquiry</option>
+                                    <option value="cultural-heritage">Cultural Heritage Discussion</option>
+                                    <option value="educational-partnership">Educational Partnership</option>
+                                    <option value="media-request">Media & Press Request</option>
+                                    <option value="heritage-story">Share Your Heritage Story</option>
+                                    <option value="general">General Inquiry</option>
+                                </select>
+                                <span class="error-message text-red-800 text-sm hidden">Please select a subject</span>
+                            </div>
+
+                            <div>
+                                <label for="heritage-connection" class="block text-sm font-semibold text-secondary-700 mb-2">
+                                    Share your connection to this heritage (Optional)
+                                </label>
+                                <input type="text" id="heritage-connection" name="heritage-connection" class="w-full px-4 py-3 border border-secondary-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 bg-white" placeholder="e.g., Family from Damascus, Student of Middle Eastern art, Cultural researcher..." />
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-sm font-semibold text-secondary-700 mb-2">
+                                    Your Message *
+                                </label>
+                                <textarea id="message" name="message" required rows="6" class="w-full px-4 py-3 border border-secondary-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all duration-300 bg-white resize-vertical" placeholder="How can we collaborate in cultural preservation? Share your thoughts, questions, or stories about Damascus heritage..."></textarea>
+                                <span class="error-message text-red-800 text-sm hidden">Please enter your message</span>
+                            </div>
+
+                            <div class="bg-accent/5 p-4 rounded-lg">
+                                <p class="text-sm text-secondary-600 italic mb-3">
+                                    "Every story shared strengthens the bridge between past and present, preserving Damascus heritage for future generations."
+                                </p>
+                                <div class="flex items-center">
+                                    <input type="checkbox" id="newsletter" name="newsletter" class="mr-3 w-4 h-4 text-accent border-secondary-300 rounded focus:ring-accent" />
+                                    <label for="newsletter" class="text-sm text-secondary-700">
+                                        Subscribe to Heritage Updates - monthly stories about preservation efforts and new discoveries
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <button type="submit" class="btn-primary text-lg px-8 py-4 flex-1 transition-all duration-300 hover:shadow-hover">
+                                    Send Message
+                                </button>
+                                <button type="reset" class="btn-secondary px-6 py-4 transition-all duration-300">
+                                    Clear Form
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- Success Message -->
+                        <div id="success-message" class="hidden mt-6 p-6 bg-green-800/10 border border-green-800/20 rounded-lg">
+                            <div class="flex items-center">
+                                <svg class="w-6 h-6 text-green-700 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                </svg>
+                                <div>
+                                    <h3 class="font-semibold text-green-700 mb-1">Message Sent Successfully!</h3>
+                                    <p class="text-green-700">Thank you for connecting with us. We'll respond within 24 hours to continue our cultural dialogue.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ways to Connect Sidebar -->
+                <div class="space-y-8">
+                    <!-- Contact Information -->
+                    <div class="card">
+                        <h3 class="font-crimson text-xl font-bold text-primary mb-6 border-b border-accent/20 pb-3">
+                            Ways to Connect
+                        </h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-secondary-700 mb-1">General Inquiries</h4>
+                                    <p class="text-sm text-secondary-600">Questions about the collection, artwork details, or cultural heritage</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-secondary-700 mb-1">Educational Partnerships</h4>
+                                    <p class="text-sm text-secondary-600">Collaborations with schools, universities, and cultural institutions</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-secondary-700 mb-1">Media Requests</h4>
+                                    <p class="text-sm text-secondary-600">Press inquiries, interviews, and feature story collaborations</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="flex-shrink-0 w-10 h-10 bg-accent/10 rounded-lg flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-secondary-700 mb-1">Heritage Stories</h4>
+                                    <p class="text-sm text-secondary-600">Share your own Damascus memories and family cultural traditions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cultural Dialogue -->
+                    <div class="card">
+                        <h3 class="font-crimson text-xl font-bold text-primary mb-6 border-b border-accent/20 pb-3">
+                            Cultural Dialogue
+                        </h3>
+                        <div class="space-y-4">
+                            <p class="text-secondary-600 text-sm leading-relaxed">
+                                We encourage visitors to share their own stories about Syrian heritage, family traditions, 
+                                or connections to Damascus culture.
+                            </p>
+                            <div class="bg-accent/5 p-4 rounded-lg">
+                                <h4 class="font-semibold text-secondary-700 mb-2">Recent Contributions</h4>
+                                <div class="space-y-3 text-sm">
+                                    <div>
+                                        <p class="text-secondary-600 italic">"My grandmother's jasmine tea recipe..."</p>
+                                        <p class="text-accent font-medium">— Sarah M., Damascus diaspora</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-secondary-600 italic">"Studying traditional courtyard architecture..."</p>
+                                        <p class="text-accent font-medium">— Dr. Ahmed K., Cultural researcher</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media & Community -->
+                    <div class="card">
+                        <h3 class="font-crimson text-xl font-bold text-primary mb-6 border-b border-accent/20 pb-3">
+                            Join Our Community
+                        </h3>
+                        <p class="text-secondary-600 text-sm mb-4">
+                            Follow our ongoing preservation efforts and cultural discoveries
+                        </p>
+                        <div class="grid grid-cols-2 gap-3">
+                            <a href="#" class="flex items-center justify-center space-x-2 p-3 bg-blue-700 text-white rounded-lg hover:bg-blue-800 transition-colors duration-300">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                                </svg>
+                                <span class="text-xs font-semibold">Twitter</span>
+                            </a>
+                            <a href="#" class="flex items-center justify-center space-x-2 p-3 bg-blue-800 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                                <span class="text-xs font-semibold">Facebook</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Heritage Newsletter Section -->
+    <section class="py-16 bg-gradient-to-r from-primary/20 to-accent/10">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-crimson text-3xl md:text-4xl font-bold text-primary mb-6">Heritage Updates</h2>
+            <p class="text-xl text-secondary-700 mb-8 max-w-2xl mx-auto">
+                Receive monthly stories about new discoveries in the collection, conservation efforts, 
+                and insights into Damascus cultural preservation.
+            </p>
+            
+            <form id="newsletter-form" class="max-w-md mx-auto">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <input type="email" id="newsletter-email" placeholder="Enter your email for heritage updates" class="flex-1 px-6 py-4 rounded-lg text-primary bg-white focus:outline-none focus:ring-2 focus:ring-accent border border-secondary-200" required />
+                    <button type="submit" class="btn-accent px-8 py-4 whitespace-nowrap transition-all duration-300 hover:shadow-hover">
+                        Subscribe
+                    </button>
+                </div>
+                <p class="text-sm text-secondary-600 mt-4">
+                    Join 500+ heritage enthusiasts. Unsubscribe at any time.
+                </p>
+            </form>
+
+            <!-- Newsletter Success Message -->
+            <div id="newsletter-success" class="hidden mt-6 p-4 bg-green-800/10 border border-green-800/20 rounded-lg">
+                <p class="text-green-700 font-medium">✓ Subscribed! Welcome to our heritage community.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-800 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <svg class="w-8 h-8 text-accent" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2L4 8v16l12 6 12-6V8L16 2zm0 2.5L25.5 9 16 13.5 6.5 9 16 4.5zM6 10.5l9 4.5v11l-9-4.5v-11zm11 16v-11l9-4.5v11L17 26.5z"/>
+                            <circle cx="16" cy="16" r="2" fill="currentColor"/>
+                        </svg>
+                        <span class="font-crimson text-xl font-semibold">Damascus Heritage Gallery</span>
+                    </div>
+                    <p class="text-secondary-300 mb-6 max-w-md">
+                        Preserving the soul of Damascus through art, creating bridges between traditional heritage and contemporary digital storytelling.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-secondary-400 hover:text-accent transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-secondary-400 hover:text-accent transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-secondary-400 hover:text-accent transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Explore</h3>
+                    <ul class="space-y-2">
+                        <li><a href="master_gallery.html" class="text-secondary-300 hover:text-accent transition-colors duration-300">Gallery</a></li>
+                        <li><a href="artist_s_journey.html" class="text-secondary-300 hover:text-accent transition-colors duration-300">Artist's Journey</a></li>
+                        <li><a href="damascene_traditions.html" class="text-secondary-300 hover:text-accent transition-colors duration-300">Traditions</a></li>
+                        <li><a href="interactive_timeline.html" class="text-secondary-300 hover:text-accent transition-colors duration-300">Timeline</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Connect</h3>
+                    <ul class="space-y-2">
+                        <li><a href="preservation_legacy.html" class="text-secondary-300 hover:text-accent transition-colors duration-300">Our Mission</a></li>
+                        <li><a href="contact_connect.html" class="text-secondary-300 hover:text-accent transition-colors duration-300">Contact Us</a></li>
+                        <li><a href="#" class="text-secondary-300 hover:text-accent transition-colors duration-300">Newsletter</a></li>
+                        <li><a href="#" class="text-secondary-300 hover:text-accent transition-colors duration-300">Community</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-secondary-700 mt-12 pt-8 text-center">
+                <p class="text-secondary-400">
+                    © 2025 Damascus Heritage Gallery. All Rights Reserved. | Preserving Cultural Legacy Through Digital Art
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Form validation and submission
+        const contactForm = document.getElementById('contact-form');
+        const successMessage = document.getElementById('success-message');
+
+        // Email validation regex
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        // Validation functions
+        function validateField(field, errorMessage) {
+            const errorSpan = field.parentNode.querySelector('.error-message');
+            
+            if (field.type === 'email') {
+                if (!field.value.trim() || !emailRegex.test(field.value)) {
+                    field.classList.add('border-red-800');
+                    errorSpan.textContent = field.value.trim() ? 'Please enter a valid email address' : 'Email is required';
+                    errorSpan.classList.remove('hidden');
+                    return false;
+                }
+            } else if (field.required && !field.value.trim()) {
+                field.classList.add('border-red-800');
+                errorSpan.textContent = errorMessage;
+                errorSpan.classList.remove('hidden');
+                return false;
+            }
+            
+            // Clear error state if valid
+            field.classList.remove('border-red-800');
+            errorSpan.classList.add('hidden');
+            return true;
+        }
+
+        // Real-time validation
+        const formFields = ['name', 'email', 'subject', 'message'];
+        formFields.forEach(fieldName => {
+            const field = document.getElementById(fieldName);
+            field.addEventListener('blur', () => {
+                const errorMessages = {
+                    'name': 'Please enter your name',
+                    'email': 'Please enter a valid email address',
+                    'subject': 'Please select a subject',
+                    'message': 'Please enter your message'
+                };
+                validateField(field, errorMessages[fieldName]);
+            });
+
+            // Clear error styling on focus
+            field.addEventListener('focus', () => {
+                field.classList.remove('border-red-800');
+                field.parentNode.querySelector('.error-message').classList.add('hidden');
+            });
+        });
+
+        // Form submission
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validate all required fields
+            const name = document.getElementById('name');
+            const email = document.getElementById('email');
+            const subject = document.getElementById('subject');
+            const message = document.getElementById('message');
+            
+            let isValid = true;
+            
+            if (!validateField(name, 'Please enter your name')) isValid = false;
+            if (!validateField(email, 'Please enter a valid email address')) isValid = false;
+            if (!validateField(subject, 'Please select a subject')) isValid = false;
+            if (!validateField(message, 'Please enter your message')) isValid = false;
+            
+            if (isValid) {
+                // Simulate form submission
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
+                submitBtn.classList.add('opacity-75');
+                
+                setTimeout(() => {
+                    // Show success message
+                    successMessage.classList.remove('hidden');
+                    contactForm.classList.add('hidden');
+                    
+                    // Scroll to success message
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    // Reset form after delay
+                    setTimeout(() => {
+                        contactForm.reset();
+                        contactForm.classList.remove('hidden');
+                        successMessage.classList.add('hidden');
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                        submitBtn.classList.remove('opacity-75');
+                    }, 5000);
+                    
+                }, 2000);
+            } else {
+                // Scroll to first error field
+                const firstError = contactForm.querySelector('.border-red-800');
+                if (firstError) {
+                    firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    firstError.focus();
+                }
+            }
+        });
+
+        // Newsletter form submission
+        const newsletterForm = document.getElementById('newsletter-form');
+        const newsletterSuccess = document.getElementById('newsletter-success');
+
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const emailField = document.getElementById('newsletter-email');
+            
+            if (emailField.value.trim() && emailRegex.test(emailField.value)) {
+                const submitBtn = newsletterForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                
+                submitBtn.textContent = 'Subscribing...';
+                submitBtn.disabled = true;
+                
+                setTimeout(() => {
+                    newsletterSuccess.classList.remove('hidden');
+                    emailField.value = '';
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    
+                    setTimeout(() => {
+                        newsletterSuccess.classList.add('hidden');
+                    }, 5000);
+                }, 1500);
+            } else {
+                emailField.focus();
+                emailField.classList.add('border-red-800');
+                setTimeout(() => {
+                    emailField.classList.remove('border-red-800');
+                }, 3000);
+            }
+        });
+
+        // Form reset functionality
+        contactForm.addEventListener('reset', function() {
+            // Clear all error states
+            const errorMessages = contactForm.querySelectorAll('.error-message');
+            const errorFields = contactForm.querySelectorAll('.border-red-800');
+            
+            errorMessages.forEach(msg => msg.classList.add('hidden'));
+            errorFields.forEach(field => field.classList.remove('border-red-800'));
+            
+            successMessage.classList.add('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add some interactive animations
+        const cards = document.querySelectorAll('.card');
+        
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const cardObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeIn 0.6s ease-out forwards';
+                }
+            });
+        }, observerOptions);
+
+        cards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            cardObserver.observe(card);
+        });
+
+        // CSS animation keyframes
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

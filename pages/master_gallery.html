@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Master Gallery - Damascus Heritage Gallery</title>
+    <meta name="description" content="Explore the complete collection of Damascus heritage artworks through our sophisticated gallery with advanced filtering and immersive viewing experiences." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fdamascush6833back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-accent/20">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="heritage_homepage.html" class="flex items-center space-x-3">
+                        <svg class="w-8 h-8 text-accent" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2L4 8v16l12 6 12-6V8L16 2zm0 2.5L25.5 9 16 13.5 6.5 9 16 4.5zM6 10.5l9 4.5v11l-9-4.5v-11zm11 16v-11l9-4.5v11L17 26.5z"/>
+                            <circle cx="16" cy="16" r="2" fill="currentColor"/>
+                        </svg>
+                        <span class="font-crimson text-xl font-semibold text-primary">Damascus Heritage</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="heritage_homepage.html" class="text-secondary-600 hover:text-primary transition-colors duration-300 px-1 py-2">Home</a>
+                    <a href="master_gallery.html" class="text-primary font-medium border-b-2 border-accent px-1 py-2">Gallery</a>
+                    <a href="artist_s_journey.html" class="text-secondary-600 hover:text-primary transition-colors duration-300 px-1 py-2">Artist's Journey</a>
+                    <a href="damascene_traditions.html" class="text-secondary-600 hover:text-primary transition-colors duration-300 px-1 py-2">Traditions</a>
+                    <a href="interactive_timeline.html" class="text-secondary-600 hover:text-primary transition-colors duration-300 px-1 py-2">Timeline</a>
+                    <a href="preservation_legacy.html" class="text-secondary-600 hover:text-primary transition-colors duration-300 px-1 py-2">Legacy</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2 rounded-lg hover:bg-surface transition-colors duration-300" id="mobile-menu-btn">
+                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-surface rounded-lg mt-2">
+                    <a href="heritage_homepage.html" class="block px-3 py-2 text-secondary-600 hover:text-primary hover:bg-accent/5 rounded-md transition-colors duration-300">Home</a>
+                    <a href="master_gallery.html" class="block px-3 py-2 text-primary font-medium bg-accent/10 rounded-md">Gallery</a>
+                    <a href="artist_s_journey.html" class="block px-3 py-2 text-secondary-600 hover:text-primary hover:bg-accent/5 rounded-md transition-colors duration-300">Artist's Journey</a>
+                    <a href="damascene_traditions.html" class="block px-3 py-2 text-secondary-600 hover:text-primary hover:bg-accent/5 rounded-md transition-colors duration-300">Traditions</a>
+                    <a href="interactive_timeline.html" class="block px-3 py-2 text-secondary-600 hover:text-primary hover:bg-accent/5 rounded-md transition-colors duration-300">Timeline</a>
+                    <a href="preservation_legacy.html" class="block px-3 py-2 text-secondary-600 hover:text-primary hover:bg-accent/5 rounded-md transition-colors duration-300">Legacy</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Gallery Header -->
+    <section class="pt-24 pb-12 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h1 class="font-crimson text-4xl md:text-6xl font-bold text-primary mb-4">Master Gallery</h1>
+                <p class="text-xl text-secondary-600 max-w-3xl mx-auto">
+                    Explore the complete collection of Damascus heritage artworks through sophisticated filtering and immersive viewing experiences
+                </p>
+            </div>
+
+            <!-- Gallery Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-accent">47</div>
+                    <div class="text-sm text-secondary-600">Artworks</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-accent">35</div>
+                    <div class="text-sm text-secondary-600">Years</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-accent">5</div>
+                    <div class="text-sm text-secondary-600">Techniques</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold text-accent">12</div>
+                    <div class="text-sm text-secondary-600">Themes</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Controls -->
+    <section class="py-8 bg-background border-b border-accent/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Search Bar -->
+            <div class="mb-6">
+                <div class="relative max-w-md mx-auto">
+                    <input type="text" placeholder="Search artworks, themes, or techniques..." class="w-full pl-12 pr-4 py-3 rounded-lg border border-secondary-200 focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent" id="search-input" />
+                    <svg class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-secondary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="flex flex-wrap justify-center gap-2 mb-6">
+                <button class="filter-tab active px-4 py-2 rounded-lg font-medium transition-colors duration-300" data-filter="all">
+                    All Works
+                </button>
+                <button class="filter-tab px-4 py-2 rounded-lg font-medium transition-colors duration-300" data-filter="oil">
+                    Oil Paintings
+                </button>
+                <button class="filter-tab px-4 py-2 rounded-lg font-medium transition-colors duration-300" data-filter="watercolor">
+                    Watercolors
+                </button>
+                <button class="filter-tab px-4 py-2 rounded-lg font-medium transition-colors duration-300" data-filter="portraits">
+                    Portraits
+                </button>
+                <button class="filter-tab px-4 py-2 rounded-lg font-medium transition-colors duration-300" data-filter="landscapes">
+                    Landscapes
+                </button>
+                <button class="filter-tab px-4 py-2 rounded-lg font-medium transition-colors duration-300" data-filter="street-scenes">
+                    Street Scenes
+                </button>
+            </div>
+
+            <!-- Advanced Filters -->
+            <div class="flex flex-wrap justify-center gap-4">
+                <!-- Period Filter -->
+                <div class="relative">
+                    <select class="appearance-none bg-white border border-secondary-200 rounded-lg px-4 py-2 pr-8 focus:outline-none focus:ring-2 focus:ring-accent" id="period-filter">
+                        <option value>All Periods</option>
+                        <option value="early">Early Years (1952-1970)</option>
+                        <option value="mature">Mature Period (1971-1990)</option>
+                        <option value="late">Late Works (1991-2010)</option>
+                    </select>
+                    <svg class="absolute right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-secondary-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </div>
+
+                <!-- Size Filter -->
+                <div class="relative">
+                    <select class="appearance-none bg-white border border-secondary-200 rounded-lg px-4 py-2 pr-8 focus:outline-none focus:ring-2 focus:ring-accent" id="size-filter">
+                        <option value>All Sizes</option>
+                        <option value="small">Small (< 50cm)</option>
+                        <option value="medium">Medium (50-80cm)</option>
+                        <option value="large">Large (> 80cm)</option>
+                    </select>
+                    <svg class="absolute right-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-secondary-400 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </div>
+
+                <!-- View Mode Toggle -->
+                <div class="flex bg-white border border-secondary-200 rounded-lg overflow-hidden">
+                    <button class="view-mode active px-4 py-2 transition-colors duration-300" data-view="grid">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+                        </svg>
+                    </button>
+                    <button class="view-mode px-4 py-2 transition-colors duration-300" data-view="list">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Reset Filters -->
+                <button class="px-4 py-2 text-secondary-600 hover:text-primary transition-colors duration-300" id="reset-filters">
+                    <svg class="w-5 h-5 inline mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                    </svg>
+                    Reset
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Exhibition Banner -->
+    <section class="py-6 bg-accent/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                    </svg>
+                    <div>
+                        <h3 class="font-crimson text-lg font-semibold text-primary">Virtual Exhibition: Seasons in Damascus</h3>
+                        <p class="text-sm text-secondary-600">Experience curated collections that tell the story of Damascus through the seasons</p>
+                    </div>
+                </div>
+                <button class="btn-accent" id="virtual-exhibition-btn">
+                    Explore Exhibition
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="py-12 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Loading State -->
+            <div class="hidden" id="loading-state">
+                <div class="flex justify-center items-center py-20">
+                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-accent"></div>
+                </div>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="masonry-grid" id="gallery-grid">
+                <!-- Artwork Card 1 -->
+                <div class="artwork-item mb-6" data-category="oil portraits early" data-size="medium">
+                    <div class="artwork-card group cursor-pointer" onclick="openLightbox(1)">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Morning Light in the Courtyard" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.pexels.com/photos/1266808/pexels-photo-1266808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-crimson text-lg font-semibold mb-1">Morning Light in the Courtyard</h3>
+                                <p class="text-sm text-white/90">Oil on Canvas • 1987 • 60 × 80 cm</p>
+                            </div>
+                            <button class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-white">
+                                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork Card 2 -->
+                <div class="artwork-item mb-6" data-category="watercolor landscapes mature" data-size="large">
+                    <div class="artwork-card group cursor-pointer" onclick="openLightbox(2)">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.pexels.com/photos/1266808/pexels-photo-1266808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Damascus Sunset Over Ancient Walls" class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.pixabay.com/photo/2017/08/06/12/06/people-2591874_1280.jpg'; this.onerror=null;" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-crimson text-lg font-semibold mb-1">Damascus Sunset Over Ancient Walls</h3>
+                                <p class="text-sm text-white/90">Watercolor • 1982 • 70 × 100 cm</p>
+                            </div>
+                            <button class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-white">
+                                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork Card 3 -->
+                <div class="artwork-item mb-6" data-category="oil street-scenes mature" data-size="medium">
+                    <div class="artwork-card group cursor-pointer" onclick="openLightbox(3)">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.pixabay.com/photo/2017/08/06/12/06/people-2591874_1280.jpg" alt="Straight Street Market Day" class="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-crimson text-lg font-semibold mb-1">Straight Street Market Day</h3>
+                                <p class="text-sm text-white/90">Oil on Canvas • 1979 • 50 × 70 cm</p>
+                            </div>
+                            <button class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-white">
+                                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork Card 4 -->
+                <div class="artwork-item mb-6" data-category="oil portraits late" data-size="small">
+                    <div class="artwork-card group cursor-pointer" onclick="openLightbox(4)">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="The Jasmine Seller" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.pexels.com/photos/1266808/pexels-photo-1266808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-crimson text-lg font-semibold mb-1">The Jasmine Seller</h3>
+                                <p class="text-sm text-white/90">Oil on Canvas • 1995 • 40 × 50 cm</p>
+                            </div>
+                            <button class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-white">
+                                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork Card 5 -->
+                <div class="artwork-item mb-6" data-category="watercolor landscapes early" data-size="medium">
+                    <div class="artwork-card group cursor-pointer" onclick="openLightbox(5)">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Barada River in Spring" class="w-full h-68 object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.pixabay.com/photo/2017/08/06/12/06/people-2591874_1280.jpg'; this.onerror=null;" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-crimson text-lg font-semibold mb-1">Barada River in Spring</h3>
+                                <p class="text-sm text-white/90">Watercolor • 1968 • 55 × 75 cm</p>
+                            </div>
+                            <button class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-white">
+                                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork Card 6 -->
+                <div class="artwork-item mb-6" data-category="oil street-scenes late" data-size="large">
+                    <div class="artwork-card group cursor-pointer" onclick="openLightbox(6)">
+                        <div class="relative overflow-hidden">
+                            <img src="https://images.pexels.com/photos/1266808/pexels-photo-1266808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Evening Prayer at Umayyad Mosque" class="w-full h-76 object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <h3 class="font-crimson text-lg font-semibold mb-1">Evening Prayer at Umayyad Mosque</h3>
+                                <p class="text-sm text-white/90">Oil on Canvas • 2001 • 80 × 120 cm</p>
+                            </div>
+                            <button class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-white">
+                                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button class="btn-secondary px-8 py-4" id="load-more-btn">
+                    Load More Artworks
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="fixed inset-0 bg-black/90 z-50 hidden" id="lightbox-modal">
+        <div class="flex h-full">
+            <!-- Main Image Area -->
+            <div class="flex-1 flex items-center justify-center p-8">
+                <div class="relative max-w-4xl max-h-full">
+                    <img src alt class="max-w-full max-h-full object-contain" id="lightbox-image" />
+                    <button class="absolute top-4 right-4 bg-white/20 backdrop-blur-sm text-white p-2 rounded-full hover:bg-white/30 transition-colors duration-300" onclick="closeLightbox()">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Side Panel -->
+            <div class="w-96 bg-white h-full overflow-y-auto" id="lightbox-panel">
+                <div class="p-6">
+                    <h2 class="font-crimson text-2xl font-bold text-primary mb-2" id="lightbox-title">Morning Light in the Courtyard</h2>
+                    <p class="text-accent font-medium mb-4" id="lightbox-details">Oil on Canvas • 1987 • 60 × 80 cm</p>
+                    
+                    <div class="space-y-6">
+                        <!-- Description -->
+                        <div>
+                            <h3 class="font-semibold text-primary mb-2">Description</h3>
+                            <p class="text-secondary-700 leading-relaxed" id="lightbox-description">
+                                This masterpiece captures the ethereal quality of Damascus morning light as it filters through traditional mashrabiya screens, illuminating the peaceful courtyard where generations have gathered for centuries.
+                            </p>
+                        </div>
+
+                        <!-- Cultural Context -->
+                        <div>
+                            <h3 class="font-semibold text-primary mb-2">Cultural Context</h3>
+                            <p class="text-secondary-700 leading-relaxed" id="lightbox-context">
+                                The courtyard represents the heart of traditional Damascus homes, where families would gather around fountains and orange trees, creating intimate spaces for daily life and celebration.
+                            </p>
+                        </div>
+
+                        <!-- Technique -->
+                        <div>
+                            <h3 class="font-semibold text-primary mb-2">Technique</h3>
+                            <p class="text-secondary-700 leading-relaxed" id="lightbox-technique">
+                                Executed using traditional oil painting techniques with careful attention to light and shadow, demonstrating the artist's mastery of classical European methods adapted to Middle Eastern subjects.
+                            </p>
+                        </div>
+
+                        <!-- Actions -->
+                        <div class="flex gap-3">
+                            <button class="btn-accent flex-1">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4-4m0 0l-4 4m4-4v12"/>
+                                </svg>
+                                Download
+                            </button>
+                            <button class="btn-secondary flex-1">
+                                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"/>
+                                </svg>
+                                Share
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Similar Works -->
+                <div class="border-t border-secondary-200 p-6">
+                    <h3 class="font-semibold text-primary mb-4">Similar Works</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center space-x-3 cursor-pointer hover:bg-surface p-2 rounded-lg transition-colors duration-300">
+                            <img src="https://images.pixabay.com/photo/2017/08/06/12/06/people-2591874_1280.jpg" alt="Jasmine Evening" class="w-12 h-12 object-cover rounded" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                            <div>
+                                <h4 class="font-medium text-primary text-sm">Jasmine Evening</h4>
+                                <p class="text-xs text-secondary-600">Oil • 1988</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3 cursor-pointer hover:bg-surface p-2 rounded-lg transition-colors duration-300">
+                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Fountain Reflections" class="w-12 h-12 object-cover rounded" onerror="this.src='https://images.pexels.com/photos/1266808/pexels-photo-1266808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                            <div>
+                                <h4 class="font-medium text-primary text-sm">Fountain Reflections</h4>
+                                <p class="text-xs text-secondary-600">Oil • 1986</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-800 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <svg class="w-8 h-8 text-accent" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2L4 8v16l12 6 12-6V8L16 2zm0 2.5L25.5 9 16 13.5 6.5 9 16 4.5zM6 10.5l9 4.5v11l-9-4.5v-11zm11 16v-11l9-4.5v11L17 26.5z"/>
+                            <circle cx="16" cy="16" r="2" fill="currentColor"/>
+                        </svg>
+                        <span class="font-crimson text-xl font-semibold">Damascus Heritage Gallery</span>
+                    </div>
+                    <p class="text-secondary-300 mb-6 max-w-md">
+                        Preserving the soul of Damascus through art, creating bridges between traditional heritage and contemporary digital storytelling.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-secondary-400 hover:text-accent transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-secondary-400 hover:text-accent transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-secondary-400 hover:text-accent transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Explore</h3>
+                    <ul class="space-y-2">
+                        <li><a href="heritage_homepage.html" class="text-secondary-300 hover:text-accent transition-colors duration-300">Home</a></li>
+                        <li><a href="artist_s_journey.html" class="text-secondary-300 hover:text-accent transition-colors duration-300">Artist's Journey</a></li>
+                        <li><a href="damascene_traditions.html" class="text-secondary-300 hover:text-accent transition-colors duration-300">Traditions</a></li>
+                        <li><a href="interactive_timeline.html" class="text-secondary-300 hover:text-accent transition-colors duration-300">Timeline</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Connect</h3>
+                    <ul class="space-y-2">
+                        <li><a href="preservation_legacy.html" class="text-secondary-300 hover:text-accent transition-colors duration-300">Our Mission</a></li>
+                        <li><a href="#" class="text-secondary-300 hover:text-accent transition-colors duration-300">Contact Us</a></li>
+                        <li><a href="#" class="text-secondary-300 hover:text-accent transition-colors duration-300">Newsletter</a></li>
+                        <li><a href="#" class="text-secondary-300 hover:text-accent transition-colors duration-300">Community</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-secondary-700 mt-12 pt-8 text-center">
+                <p class="text-secondary-400">
+                    © 2025 Damascus Heritage Gallery. All Rights Reserved. | Preserving Cultural Legacy Through Digital Art
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Filter functionality
+        const filterTabs = document.querySelectorAll('.filter-tab');
+        const viewModes = document.querySelectorAll('.view-mode');
+        const artworkItems = document.querySelectorAll('.artwork-item');
+        const searchInput = document.getElementById('search-input');
+        const periodFilter = document.getElementById('period-filter');
+        const sizeFilter = document.getElementById('size-filter');
+        const resetFiltersBtn = document.getElementById('reset-filters');
+
+        // Filter tab functionality
+        filterTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                filterTabs.forEach(t => {
+                    t.classList.remove('active', 'bg-accent', 'text-primary');
+                    t.classList.add('text-secondary-600', 'hover:text-primary');
+                });
+                tab.classList.add('active', 'bg-accent', 'text-primary');
+                tab.classList.remove('text-secondary-600', 'hover:text-primary');
+                
+                filterArtworks();
+            });
+        });
+
+        // View mode toggle
+        viewModes.forEach(mode => {
+            mode.addEventListener('click', () => {
+                viewModes.forEach(m => {
+                    m.classList.remove('active', 'bg-accent', 'text-primary');
+                    m.classList.add('text-secondary-600');
+                });
+                mode.classList.add('active', 'bg-accent', 'text-primary');
+                mode.classList.remove('text-secondary-600');
+                
+                const viewType = mode.dataset.view;
+                const galleryGrid = document.getElementById('gallery-grid');
+                
+                if (viewType === 'list') {
+                    galleryGrid.classList.remove('masonry-grid');
+                    galleryGrid.classList.add('space-y-4');
+                    artworkItems.forEach(item => {
+                        item.classList.add('flex', 'items-center', 'space-x-4', 'bg-white', 'p-4', 'rounded-lg');
+                    });
+                } else {
+                    galleryGrid.classList.add('masonry-grid');
+                    galleryGrid.classList.remove('space-y-4');
+                    artworkItems.forEach(item => {
+                        item.classList.remove('flex', 'items-center', 'space-x-4', 'bg-white', 'p-4');
+                    });
+                }
+            });
+        });
+
+        // Filter artworks function
+        function filterArtworks() {
+            const activeTab = document.querySelector('.filter-tab.active');
+            const activeFilter = activeTab ? activeTab.dataset.filter : 'all';
+            const searchTerm = searchInput.value.toLowerCase();
+            const periodValue = periodFilter.value;
+            const sizeValue = sizeFilter.value;
+
+            artworkItems.forEach(item => {
+                const categories = item.dataset.category.toLowerCase();
+                const shouldShow = (
+                    (activeFilter === 'all' || categories.includes(activeFilter)) &&
+                    (searchTerm === '' || categories.includes(searchTerm)) &&
+                    (periodValue === '' || categories.includes(periodValue)) &&
+                    (sizeValue === '' || item.dataset.size === sizeValue)
+                );
+
+                if (shouldShow) {
+                    item.style.display = 'block';
+                    item.classList.add('animate-fade-in');
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Search functionality
+        searchInput.addEventListener('input', filterArtworks);
+        periodFilter.addEventListener('change', filterArtworks);
+        sizeFilter.addEventListener('change', filterArtworks);
+
+        // Reset filters
+        resetFiltersBtn.addEventListener('click', () => {
+            searchInput.value = '';
+            periodFilter.value = '';
+            sizeFilter.value = '';
+            
+            filterTabs.forEach(tab => {
+                tab.classList.remove('active', 'bg-accent', 'text-primary');
+                tab.classList.add('text-secondary-600', 'hover:text-primary');
+            });
+            filterTabs[0].classList.add('active', 'bg-accent', 'text-primary');
+            filterTabs[0].classList.remove('text-secondary-600', 'hover:text-primary');
+            
+            filterArtworks();
+        });
+
+        // Lightbox functionality
+        const lightboxModal = document.getElementById('lightbox-modal');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const lightboxTitle = document.getElementById('lightbox-title');
+        const lightboxDetails = document.getElementById('lightbox-details');
+        const lightboxDescription = document.getElementById('lightbox-description');
+        const lightboxContext = document.getElementById('lightbox-context');
+        const lightboxTechnique = document.getElementById('lightbox-technique');
+
+        const artworkData = {
+            1: {
+                src: 'https://images.unsplash.com/photo-1541961017774-22349e4a1262?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3',
+                title: 'Morning Light in the Courtyard',
+                details: 'Oil on Canvas • 1987 • 60 × 80 cm',
+                description: 'This masterpiece captures the ethereal quality of Damascus morning light as it filters through traditional mashrabiya screens, illuminating the peaceful courtyard where generations have gathered for centuries.',
+                context: 'The courtyard represents the heart of traditional Damascus homes, where families would gather around fountains and orange trees, creating intimate spaces for daily life and celebration.',
+                technique: 'Executed using traditional oil painting techniques with careful attention to light and shadow, demonstrating the artist\'s mastery of classical European methods adapted to Middle Eastern subjects.'
+            },
+            2: {
+                src: 'https://images.pexels.com/photos/1266808/pexels-photo-1266808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+                title: 'Damascus Sunset Over Ancient Walls',
+                details: 'Watercolor • 1982 • 70 × 100 cm',
+                description: 'A breathtaking watercolor capturing the golden hour as the sun sets behind Damascus\'s ancient city walls, painting the sky in warm hues that reflect the city\'s timeless beauty.',
+                context: 'The ancient walls of Damascus have stood for centuries, witnessing the rise and fall of empires while protecting the cultural treasures within the old city.',
+                technique: 'Masterful watercolor technique with wet-on-wet applications creating soft, luminous effects that capture the ephemeral quality of light at sunset.'
+            },
+            3: {
+                src: 'https://images.pixabay.com/photo/2017/08/06/12/06/people-2591874_1280.jpg',
+                title: 'Straight Street Market Day',
+                details: 'Oil on Canvas • 1979 • 50 × 70 cm',
+                description: 'A vibrant scene from the famous Straight Street market, capturing the bustling energy of daily commerce and the rich tapestry of Damascus street life.',
+                context: 'Straight Street, mentioned in the Bible, has been a center of commerce for over two millennia, representing the continuity of Damascus as a trading hub.',
+                technique: 'Bold brushwork and rich color palette bring life to the busy market scene, with careful attention to the interplay of light and shadow in the narrow street.'
+            },
+            4: {
+                src: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3',
+                title: 'The Jasmine Seller',
+                details: 'Oil on Canvas • 1995 • 40 × 50 cm',
+                description: 'An intimate portrait of a jasmine seller, capturing the dignity and grace of traditional Damascus street vendors who have been part of the city\'s fabric for generations.',
+                context: 'Jasmine holds special significance in Damascus culture, its fragrance filling the evening air and symbolizing the beauty and resilience of the city.',
+                technique: 'Delicate portraiture with soft, warm tones that emphasize the subject\'s humanity and the cultural significance of their trade.'
+            },
+            5: {
+                src: 'https://images.unsplash.com/photo-1541961017774-22349e4a1262?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3',
+                title: 'Barada River in Spring',
+                details: 'Watercolor • 1968 • 55 × 75 cm',
+                description: 'A serene watercolor depicting the Barada River during spring, when the waters run clear and the surrounding landscape bursts with new life.',
+                context: 'The Barada River has been the lifeblood of Damascus since ancient times, providing water for the city\'s gardens and creating the oasis that made Damascus possible.',
+                technique: 'Fluid watercolor technique captures the movement of water and the fresh greens of spring, with transparent layers creating depth and luminosity.'
+            },
+            6: {
+                src: 'https://images.pexels.com/photos/1266808/pexels-photo-1266808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+                title: 'Evening Prayer at Umayyad Mosque',
+                details: 'Oil on Canvas • 2001 • 80 × 120 cm',
+                description: 'A reverent depiction of evening prayer at the historic Umayyad Mosque, capturing the spiritual atmosphere and architectural grandeur of this sacred space.',
+                context: 'The Umayyad Mosque, one of the largest and oldest mosques in the world, represents the spiritual heart of Damascus and its rich Islamic heritage.',
+                technique: 'Sophisticated use of light and architectural perspective creates a sense of sacred space, with warm tones evoking the spiritual atmosphere of prayer time.'
+            }
+        };
+
+        function openLightbox(artworkId) {
+            const artwork = artworkData[artworkId];
+            if (artwork) {
+                lightboxImage.src = artwork.src;
+                lightboxImage.alt = artwork.title;
+                lightboxTitle.textContent = artwork.title;
+                lightboxDetails.textContent = artwork.details;
+                lightboxDescription.textContent = artwork.description;
+                lightboxContext.textContent = artwork.context;
+                lightboxTechnique.textContent = artwork.technique;
+                
+                lightboxModal.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeLightbox() {
+            lightboxModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close lightbox on background click
+        lightboxModal.addEventListener('click', (e) => {
+            if (e.target === lightboxModal) {
+                closeLightbox();
+            }
+        });
+
+        // Close lightbox on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !lightboxModal.classList.contains('hidden')) {
+                closeLightbox();
+            }
+        });
+
+        // Virtual exhibition functionality
+        document.getElementById('virtual-exhibition-btn').addEventListener('click', () => {
+            alert('Virtual Exhibition: Seasons in Damascus\n\nExplore curated collections that showcase the changing seasons through the artist\'s eyes, from spring blossoms to winter contemplation.');
+        });
+
+        // Load more functionality
+        document.getElementById('load-more-btn').addEventListener('click', () => {
+            const loadingState = document.getElementById('loading-state');
+            const loadMoreBtn = document.getElementById('load-more-btn');
+            
+            loadMoreBtn.style.display = 'none';
+            loadingState.classList.remove('hidden');
+            
+            setTimeout(() => {
+                loadingState.classList.add('hidden');
+                loadMoreBtn.style.display = 'block';
+                alert('All artworks have been loaded. Explore our virtual exhibitions for more curated content!');
+            }, 2000);
+        });
+
+        // Masonry grid layout
+        function initMasonryGrid() {
+            const grid = document.getElementById('gallery-grid');
+            grid.style.columnCount = 'auto';
+            grid.style.columnWidth = '300px';
+            grid.style.columnGap = '1.5rem';
+        }
+
+        // Initialize masonry on load
+        window.addEventListener('load', initMasonryGrid);
+        window.addEventListener('resize', initMasonryGrid);
+    </script>
+
+    <style>
+        .masonry-grid {
+            column-count: auto;
+            column-width: 300px;
+            column-gap: 1.5rem;
+        }
+
+        .artwork-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+        }
+
+        .filter-tab.active {
+            background-color: var(--color-accent);
+            color: var(--color-primary);
+        }
+
+        .filter-tab:not(.active) {
+            color: var(--color-secondary-600);
+        }
+
+        .filter-tab:not(.active):hover {
+            color: var(--color-primary);
+        }
+
+        .view-mode.active {
+            background-color: var(--color-accent);
+            color: var(--color-primary);
+        }
+
+        .view-mode:not(.active) {
+            color: var(--color-secondary-600);
+        }
+
+        @media (max-width: 768px) {
+            .masonry-grid {
+                column-count: 1;
+                column-width: auto;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .masonry-grid {
+                column-count: 2;
+                column-width: auto;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            .masonry-grid {
+                column-count: 3;
+                column-width: auto;
+            }
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Timeline - Damascus Heritage Gallery</title>
+    <meta name="description" content="Explore the artist's life journey mapped against Damascus's rich cultural history through an interactive timeline experience." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fdamascush6833back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.5"></script>
+</head>
+<body class="bg-background text-text-primary">
+    <!-- Navigation Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-accent/20">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="heritage_homepage.html" class="flex items-center space-x-3">
+                        <svg class="w-8 h-8 text-accent" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2L4 8v16l12 6 12-6V8L16 2zm0 2.5L25.5 9 16 13.5 6.5 9 16 4.5zM6 10.5l9 4.5v11l-9-4.5v-11zm11 16v-11l9-4.5v11L17 26.5z"/>
+                            <circle cx="16" cy="16" r="2" fill="currentColor"/>
+                        </svg>
+                        <span class="font-crimson text-xl font-semibold text-primary">Damascus Heritage</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="heritage_homepage.html" class="text-secondary-600 hover:text-primary transition-colors duration-300 px-1 py-2">Home</a>
+                    <a href="master_gallery.html" class="text-secondary-600 hover:text-primary transition-colors duration-300 px-1 py-2">Gallery</a>
+                    <a href="artist_s_journey.html" class="text-secondary-600 hover:text-primary transition-colors duration-300 px-1 py-2">Artist's Journey</a>
+                    <a href="damascene_traditions.html" class="text-secondary-600 hover:text-primary transition-colors duration-300 px-1 py-2">Traditions</a>
+                    <a href="interactive_timeline.html" class="text-primary font-medium border-b-2 border-accent px-1 py-2">Timeline</a>
+                    <a href="preservation_legacy.html" class="text-secondary-600 hover:text-primary transition-colors duration-300 px-1 py-2">Legacy</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2 rounded-lg hover:bg-surface transition-colors duration-300" id="mobile-menu-btn">
+                    <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 bg-surface rounded-lg mt-2">
+                    <a href="heritage_homepage.html" class="block px-3 py-2 text-secondary-600 hover:text-primary hover:bg-accent/5 rounded-md transition-colors duration-300">Home</a>
+                    <a href="master_gallery.html" class="block px-3 py-2 text-secondary-600 hover:text-primary hover:bg-accent/5 rounded-md transition-colors duration-300">Gallery</a>
+                    <a href="artist_s_journey.html" class="block px-3 py-2 text-secondary-600 hover:text-primary hover:bg-accent/5 rounded-md transition-colors duration-300">Artist's Journey</a>
+                    <a href="damascene_traditions.html" class="block px-3 py-2 text-secondary-600 hover:text-primary hover:bg-accent/5 rounded-md transition-colors duration-300">Traditions</a>
+                    <a href="interactive_timeline.html" class="block px-3 py-2 text-primary font-medium bg-accent/10 rounded-md">Timeline</a>
+                    <a href="preservation_legacy.html" class="block px-3 py-2 text-secondary-600 hover:text-primary hover:bg-accent/5 rounded-md transition-colors duration-300">Legacy</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-24 pb-16 bg-gradient-to-br from-primary/10 to-accent/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <div class="mb-6">
+                    <p class="font-amiri text-accent text-xl mb-2">رحلة عبر الزمن</p>
+                    <h1 class="font-crimson text-4xl md:text-6xl font-bold text-primary mb-6">
+                        Journey Through Time
+                    </h1>
+                </div>
+                <p class="text-xl text-secondary-700 max-w-3xl mx-auto leading-relaxed">
+                    Explore the artist's life journey mapped against Damascus's rich cultural history, 
+                    revealing how personal artistic development intertwined with broader cultural movements.
+                </p>
+            </div>
+
+            <!-- Timeline Filters -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="timeline-filter active bg-accent text-primary px-6 py-3 rounded-lg font-semibold transition-all duration-300" data-filter="all">
+                    All Events
+                </button>
+                <button class="timeline-filter bg-surface text-secondary-700 hover:bg-accent hover:text-primary px-6 py-3 rounded-lg font-semibold transition-all duration-300" data-filter="artistic">
+                    Artistic Development
+                </button>
+                <button class="timeline-filter bg-surface text-secondary-700 hover:bg-accent hover:text-primary px-6 py-3 rounded-lg font-semibold transition-all duration-300" data-filter="cultural">
+                    Cultural Events
+                </button>
+                <button class="timeline-filter bg-surface text-secondary-700 hover:bg-accent hover:text-primary px-6 py-3 rounded-lg font-semibold transition-all duration-300" data-filter="family">
+                    Family History
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Timeline -->
+    <section class="py-20 bg-background">
+        <div class="max-w-full px-4 sm:px-6 lg:px-8">
+            <!-- Timeline Navigation -->
+            <div class="max-w-7xl mx-auto mb-8">
+                <div class="flex items-center justify-between">
+                    <button id="timeline-prev" class="p-3 bg-surface rounded-full hover:bg-accent hover:text-primary transition-all duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+                    <div class="text-center">
+                        <p class="text-secondary-600 text-sm">Navigate Timeline</p>
+                        <p class="font-semibold text-primary">1952 - 2010</p>
+                    </div>
+                    <button id="timeline-next" class="p-3 bg-surface rounded-full hover:bg-accent hover:text-primary transition-all duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Timeline Container -->
+            <div class="timeline-container overflow-x-auto pb-8" id="timeline-container">
+                <div class="timeline-track relative" style="width: 4000px; height: 400px;">
+                    <!-- Timeline Base Line -->
+                    <div class="absolute top-1/2 left-0 right-0 h-1 bg-accent/30 transform -translate-y-1/2"></div>
+
+                    <!-- Personal Milestones Track (Top) -->
+                    <div class="absolute top-0 left-0 right-0 h-1/2">
+                        <!-- Birth - 1952 -->
+                        <div class="timeline-event personal absolute" style="left: 2%; top: 20%;" data-category="family" data-year="1952">
+                            <div class="timeline-marker bg-accent w-4 h-4 rounded-full border-4 border-white shadow-soft"></div>
+                            <div class="timeline-content bg-white p-4 rounded-lg shadow-card mt-2 w-64">
+                                <div class="flex items-center space-x-3 mb-3">
+                                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Old Damascus" class="w-12 h-12 object-cover rounded-lg" onerror="this.src='https://images.pexels.com/photos/1266808/pexels-photo-1266808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                                    <div>
+                                        <h3 class="font-crimson text-lg font-bold text-primary">1952</h3>
+                                        <p class="text-sm text-secondary-600">Birth in Damascus</p>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-secondary-700">Born in the historic Straight Street quarter, surrounded by centuries of artistic tradition.</p>
+                                <button class="timeline-detail-btn text-accent text-sm font-medium mt-2 hover:underline" data-event="birth-1952">
+                                    Learn More →
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Art Education - 1970 -->
+                        <div class="timeline-event personal absolute" style="left: 18%; top: 30%;" data-category="artistic" data-year="1970">
+                            <div class="timeline-marker bg-accent w-4 h-4 rounded-full border-4 border-white shadow-soft"></div>
+                            <div class="timeline-content bg-white p-4 rounded-lg shadow-card mt-2 w-64">
+                                <div class="flex items-center space-x-3 mb-3">
+                                    <img src="https://images.pexels.com/photos/1266808/pexels-photo-1266808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Art Education" class="w-12 h-12 object-cover rounded-lg" onerror="this.src='https://images.pixabay.com/photo/2017/08/06/12/06/people-2591874_1280.jpg'; this.onerror=null;" />
+                                    <div>
+                                        <h3 class="font-crimson text-lg font-bold text-primary">1970</h3>
+                                        <p class="text-sm text-secondary-600">Art School</p>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-secondary-700">Enrolled at Damascus Fine Arts Academy, studying traditional techniques and modern approaches.</p>
+                                <button class="timeline-detail-btn text-accent text-sm font-medium mt-2 hover:underline" data-event="education-1970">
+                                    Learn More →
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- First Exhibition - 1975 -->
+                        <div class="timeline-event personal absolute" style="left: 35%; top: 20%;" data-category="artistic" data-year="1975">
+                            <div class="timeline-marker bg-accent w-4 h-4 rounded-full border-4 border-white shadow-soft"></div>
+                            <div class="timeline-content bg-white p-4 rounded-lg shadow-card mt-2 w-64">
+                                <div class="flex items-center space-x-3 mb-3">
+                                    <img src="https://images.pixabay.com/photo/2017/08/06/12/06/people-2591874_1280.jpg" alt="First Exhibition" class="w-12 h-12 object-cover rounded-lg" onerror="this.src='https://images.unsplash.com/photo-1541961017774-22349e4a1262?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                                    <div>
+                                        <h3 class="font-crimson text-lg font-bold text-primary">1975</h3>
+                                        <p class="text-sm text-secondary-600">First Solo Exhibition</p>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-secondary-700">Debut exhibition at Damascus Cultural Center featuring 25 paintings of traditional courtyard life.</p>
+                                <button class="timeline-detail-btn text-accent text-sm font-medium mt-2 hover:underline" data-event="exhibition-1975">
+                                    Learn More →
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Masterpiece Period - 1987 -->
+                        <div class="timeline-event personal absolute" style="left: 60%; top: 30%;" data-category="artistic" data-year="1987">
+                            <div class="timeline-marker bg-accent w-4 h-4 rounded-full border-4 border-white shadow-soft"></div>
+                            <div class="timeline-content bg-white p-4 rounded-lg shadow-card mt-2 w-64">
+                                <div class="flex items-center space-x-3 mb-3">
+                                    <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Masterpiece Period" class="w-12 h-12 object-cover rounded-lg" onerror="this.src='https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                                    <div>
+                                        <h3 class="font-crimson text-lg font-bold text-primary">1987</h3>
+                                        <p class="text-sm text-secondary-600">Masterpiece Period</p>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-secondary-700">Created his most celebrated works, including "Morning Light in the Courtyard."</p>
+                                <button class="timeline-detail-btn text-accent text-sm font-medium mt-2 hover:underline" data-event="masterpiece-1987">
+                                    Learn More →
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Cultural Recognition - 1995 -->
+                        <div class="timeline-event personal absolute" style="left: 80%; top: 20%;" data-category="artistic" data-year="1995">
+                            <div class="timeline-marker bg-accent w-4 h-4 rounded-full border-4 border-white shadow-soft"></div>
+                            <div class="timeline-content bg-white p-4 rounded-lg shadow-card mt-2 w-64">
+                                <div class="flex items-center space-x-3 mb-3">
+                                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Cultural Recognition" class="w-12 h-12 object-cover rounded-lg" onerror="this.src='https://images.pexels.com/photos/1266808/pexels-photo-1266808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                                    <div>
+                                        <h3 class="font-crimson text-lg font-bold text-primary">1995</h3>
+                                        <p class="text-sm text-secondary-600">Cultural Recognition</p>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-secondary-700">Received Damascus Cultural Heritage Award for preserving traditional artistic techniques.</p>
+                                <button class="timeline-detail-btn text-accent text-sm font-medium mt-2 hover:underline" data-event="recognition-1995">
+                                    Learn More →
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Historical Context Track (Bottom) -->
+                    <div class="absolute bottom-0 left-0 right-0 h-1/2">
+                        <!-- Damascus Cultural Renaissance - 1960s -->
+                        <div class="timeline-event historical absolute" style="left: 10%; bottom: 20%;" data-category="cultural" data-year="1960">
+                            <div class="timeline-marker bg-primary w-4 h-4 rounded-full border-4 border-white shadow-soft"></div>
+                            <div class="timeline-content bg-surface p-4 rounded-lg shadow-card mb-2 w-64">
+                                <div class="flex items-center space-x-3 mb-3">
+                                    <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                    </svg>
+                                    <div>
+                                        <h3 class="font-crimson text-lg font-bold text-primary">1960s</h3>
+                                        <p class="text-sm text-secondary-600">Cultural Renaissance</p>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-secondary-700">Damascus experiences a cultural renaissance with new art galleries and cultural institutions.</p>
+                                <button class="timeline-detail-btn text-accent text-sm font-medium mt-2 hover:underline" data-event="renaissance-1960">
+                                    Learn More →
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Old City Preservation - 1979 -->
+                        <div class="timeline-event historical absolute" style="left: 40%; bottom: 30%;" data-category="cultural" data-year="1979">
+                            <div class="timeline-marker bg-primary w-4 h-4 rounded-full border-4 border-white shadow-soft"></div>
+                            <div class="timeline-content bg-surface p-4 rounded-lg shadow-card mb-2 w-64">
+                                <div class="flex items-center space-x-3 mb-3">
+                                    <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                    </svg>
+                                    <div>
+                                        <h3 class="font-crimson text-lg font-bold text-primary">1979</h3>
+                                        <p class="text-sm text-secondary-600">UNESCO Heritage</p>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-secondary-700">Damascus Old City designated as UNESCO World Heritage Site, emphasizing cultural preservation.</p>
+                                <button class="timeline-detail-btn text-accent text-sm font-medium mt-2 hover:underline" data-event="unesco-1979">
+                                    Learn More →
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Cultural Institutions Growth - 1990s -->
+                        <div class="timeline-event historical absolute" style="left: 75%; bottom: 20%;" data-category="cultural" data-year="1990">
+                            <div class="timeline-marker bg-primary w-4 h-4 rounded-full border-4 border-white shadow-soft"></div>
+                            <div class="timeline-content bg-surface p-4 rounded-lg shadow-card mb-2 w-64">
+                                <div class="flex items-center space-x-3 mb-3">
+                                    <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                                    </svg>
+                                    <div>
+                                        <h3 class="font-crimson text-lg font-bold text-primary">1990s</h3>
+                                        <p class="text-sm text-secondary-600">Cultural Growth</p>
+                                    </div>
+                                </div>
+                                <p class="text-sm text-secondary-700">Expansion of cultural institutions and art education programs throughout Damascus.</p>
+                                <button class="timeline-detail-btn text-accent text-sm font-medium mt-2 hover:underline" data-event="growth-1990">
+                                    Learn More →
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parallel Stories Section -->
+    <section class="py-20 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-crimson text-4xl md:text-5xl font-bold text-primary mb-4">Parallel Stories</h2>
+                <p class="text-xl text-secondary-600 max-w-2xl mx-auto">
+                    Discover how the artist's journey reflects broader patterns in Syrian cultural preservation and diaspora experiences
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="card hover:shadow-hover">
+                    <div class="flex items-start space-x-4 mb-6">
+                        <div class="flex-shrink-0 w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-crimson text-2xl font-bold text-primary mb-3">Cultural Preservation Movement</h3>
+                            <p class="text-secondary-700 leading-relaxed mb-4">
+                                The artist's dedication to preserving traditional Damascene techniques paralleled a broader movement 
+                                across Syria to document and maintain cultural heritage in the face of modernization.
+                            </p>
+                            <div class="bg-accent/5 p-4 rounded-lg">
+                                <h4 class="font-semibold text-primary mb-2">Key Connections:</h4>
+                                <ul class="text-sm text-secondary-600 space-y-1">
+                                    <li>• UNESCO World Heritage designation (1979)</li>
+                                    <li>• Traditional craft revival programs</li>
+                                    <li>• Cultural documentation initiatives</li>
+                                    <li>• Intergenerational knowledge transfer</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card hover:shadow-hover">
+                    <div class="flex items-start space-x-4 mb-6">
+                        <div class="flex-shrink-0 w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-crimson text-2xl font-bold text-primary mb-3">Diaspora Experience</h3>
+                            <p class="text-secondary-700 leading-relaxed mb-4">
+                                The artist's story resonates with countless Syrian families who have maintained cultural connections 
+                                across distances, using art and memory to preserve their heritage.
+                            </p>
+                            <div class="bg-accent/5 p-4 rounded-lg">
+                                <h4 class="font-semibold text-primary mb-2">Shared Themes:</h4>
+                                <ul class="text-sm text-secondary-600 space-y-1">
+                                    <li>• Cultural identity preservation</li>
+                                    <li>• Intergenerational storytelling</li>
+                                    <li>• Art as cultural bridge</li>
+                                    <li>• Memory as resistance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multimedia Gallery -->
+    <section class="py-20 bg-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-crimson text-4xl md:text-5xl font-bold text-primary mb-4">Multimedia Memories</h2>
+                <p class="text-xl text-secondary-600 max-w-2xl mx-auto">
+                    Experience the timeline through family photographs, historical imagery, and audio recordings
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Family Photographs -->
+                <div class="card hover:shadow-hover">
+                    <div class="relative mb-4">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Family Photographs" class="w-full h-48 object-cover rounded-lg" onerror="this.src='https://images.pexels.com/photos/1266808/pexels-photo-1266808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="font-crimson text-xl font-bold text-primary mb-2">Family Photographs</h3>
+                    <p class="text-secondary-600 mb-4">Intimate moments capturing the artist's life, family gatherings, and creative process in traditional Damascus settings.</p>
+                    <button class="btn-secondary w-full">View Gallery</button>
+                </div>
+
+                <!-- Historical Damascus -->
+                <div class="card hover:shadow-hover">
+                    <div class="relative mb-4">
+                        <img src="https://images.pexels.com/photos/1266808/pexels-photo-1266808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Historical Damascus" class="w-full h-48 object-cover rounded-lg" onerror="this.src='https://images.pixabay.com/photo/2017/08/06/12/06/people-2591874_1280.jpg'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="font-crimson text-xl font-bold text-primary mb-2">Historical Damascus</h3>
+                    <p class="text-secondary-600 mb-4">Archival images showcasing Damascus's architectural heritage, cultural landmarks, and the city's evolution through decades.</p>
+                    <button class="btn-secondary w-full">Explore Archive</button>
+                </div>
+
+                <!-- Audio Recordings -->
+                <div class="card hover:shadow-hover">
+                    <div class="relative mb-4">
+                        <div class="w-full h-48 bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg flex items-center justify-center">
+                            <svg class="w-16 h-16 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="font-crimson text-xl font-bold text-primary mb-2">Audio Memories</h3>
+                    <p class="text-secondary-600 mb-4">Family members sharing personal stories, memories, and insights about the artist's dedication to cultural preservation.</p>
+                    <button class="btn-secondary w-full">Listen Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-primary text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-crimson text-4xl md:text-5xl font-bold mb-6">Continue the Journey</h2>
+            <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Explore more aspects of this remarkable artistic legacy and cultural preservation story.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="master_gallery.html" class="btn-accent text-lg px-8 py-4">
+                    View Complete Gallery
+                </a>
+                <a href="artist_s_journey.html" class="bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/30 transition-all duration-300">
+                    Read Full Biography
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-800 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <svg class="w-8 h-8 text-accent" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2L4 8v16l12 6 12-6V8L16 2zm0 2.5L25.5 9 16 13.5 6.5 9 16 4.5zM6 10.5l9 4.5v11l-9-4.5v-11zm11 16v-11l9-4.5v11L17 26.5z"/>
+                            <circle cx="16" cy="16" r="2" fill="currentColor"/>
+                        </svg>
+                        <span class="font-crimson text-xl font-semibold">Damascus Heritage Gallery</span>
+                    </div>
+                    <p class="text-secondary-300 mb-6 max-w-md">
+                        Preserving the soul of Damascus through art, creating bridges between traditional heritage and contemporary digital storytelling.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-secondary-400 hover:text-accent transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-secondary-400 hover:text-accent transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-secondary-400 hover:text-accent transition-colors duration-300">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Explore</h3>
+                    <ul class="space-y-2">
+                        <li><a href="master_gallery.html" class="text-secondary-300 hover:text-accent transition-colors duration-300">Gallery</a></li>
+                        <li><a href="artist_s_journey.html" class="text-secondary-300 hover:text-accent transition-colors duration-300">Artist's Journey</a></li>
+                        <li><a href="damascene_traditions.html" class="text-secondary-300 hover:text-accent transition-colors duration-300">Traditions</a></li>
+                        <li><a href="interactive_timeline.html" class="text-secondary-300 hover:text-accent transition-colors duration-300">Timeline</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Connect</h3>
+                    <ul class="space-y-2">
+                        <li><a href="preservation_legacy.html" class="text-secondary-300 hover:text-accent transition-colors duration-300">Our Mission</a></li>
+                        <li><a href="#" class="text-secondary-300 hover:text-accent transition-colors duration-300">Contact Us</a></li>
+                        <li><a href="#" class="text-secondary-300 hover:text-accent transition-colors duration-300">Newsletter</a></li>
+                        <li><a href="#" class="text-secondary-300 hover:text-accent transition-colors duration-300">Community</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-secondary-700 mt-12 pt-8 text-center">
+                <p class="text-secondary-400">
+                    © 2025 Damascus Heritage Gallery. All Rights Reserved. | Preserving Cultural Legacy Through Digital Art
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Timeline Detail Modal -->
+    <div id="timeline-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 id="modal-title" class="font-crimson text-3xl font-bold text-primary"></h2>
+                        <button id="close-modal" class="p-2 hover:bg-surface rounded-lg transition-colors duration-300">
+                            <svg class="w-6 h-6 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="modal-content" class="prose prose-lg max-w-none">
+                        <!-- Content will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Timeline filtering
+        const filterButtons = document.querySelectorAll('.timeline-filter');
+        const timelineEvents = document.querySelectorAll('.timeline-event');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Update active filter
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('active', 'bg-accent', 'text-primary');
+                    btn.classList.add('bg-surface', 'text-secondary-700');
+                });
+                button.classList.add('active', 'bg-accent', 'text-primary');
+                button.classList.remove('bg-surface', 'text-secondary-700');
+
+                // Filter events
+                const filter = button.dataset.filter;
+                timelineEvents.forEach(event => {
+                    if (filter === 'all' || event.dataset.category === filter) {
+                        event.style.display = 'block';
+                        event.style.opacity = '1';
+                    } else {
+                        event.style.opacity = '0.3';
+                    }
+                });
+            });
+        });
+
+        // Timeline navigation
+        const timelineContainer = document.getElementById('timeline-container');
+        const prevBtn = document.getElementById('timeline-prev');
+        const nextBtn = document.getElementById('timeline-next');
+
+        prevBtn.addEventListener('click', () => {
+            timelineContainer.scrollBy({ left: -400, behavior: 'smooth' });
+        });
+
+        nextBtn.addEventListener('click', () => {
+            timelineContainer.scrollBy({ left: 400, behavior: 'smooth' });
+        });
+
+        // Timeline detail modal
+        const modal = document.getElementById('timeline-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalContent = document.getElementById('modal-content');
+        const closeModal = document.getElementById('close-modal');
+
+        const timelineDetails = {
+            'birth-1952': {
+                title: '1952 - Birth in Damascus',
+                content: `
+                    <div class="grid md:grid-cols-2 gap-8 mb-6">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" 
+                             alt="Old Damascus Street" 
+                             class="w-full h-64 object-cover rounded-lg">
+                        <div>
+                            <h3 class="font-crimson text-xl font-bold text-primary mb-3">Early Life in the Old City</h3>
+                            <p class="text-secondary-700 mb-4">Born in the historic Straight Street quarter, one of Damascus's most culturally rich neighborhoods, surrounded by centuries of artistic tradition and architectural heritage.</p>
+                            <div class="bg-accent/5 p-4 rounded-lg">
+                                <h4 class="font-semibold text-primary mb-2">Cultural Context:</h4>
+                                <p class="text-sm text-secondary-600">The 1950s marked a period of cultural renaissance in Damascus, with traditional crafts and arts experiencing renewed interest among younger generations.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-secondary-700 leading-relaxed">The artist's birth coincided with a significant period in Damascus's cultural history. The city was experiencing a renaissance of traditional arts, and families in the Old City were particularly conscious of preserving their cultural heritage. Growing up surrounded by traditional architecture, courtyard gardens, and the sounds of craftsmen at work, the future artist was immersed in the aesthetic and cultural values that would later define his artistic vision.</p>
+                `
+            },
+            'education-1970': {
+                title: '1970 - Art Education',
+                content: `
+                    <div class="grid md:grid-cols-2 gap-8 mb-6">
+                        <img src="https://images.pexels.com/photos/1266808/pexels-photo-1266808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+                             alt="Damascus Fine Arts Academy" 
+                             class="w-full h-64 object-cover rounded-lg">
+                        <div>
+                            <h3 class="font-crimson text-xl font-bold text-primary mb-3">Formal Artistic Training</h3>
+                            <p class="text-secondary-700 mb-4">Enrolled at Damascus Fine Arts Academy, where he studied both traditional Syrian artistic techniques and contemporary approaches to painting and composition.</p>
+                            <div class="bg-accent/5 p-4 rounded-lg">
+                                <h4 class="font-semibold text-primary mb-2">Key Influences:</h4>
+                                <ul class="text-sm text-secondary-600 space-y-1">
+                                    <li>• Traditional Islamic geometric patterns</li>
+                                    <li>• European oil painting techniques</li>
+                                    <li>• Local architectural elements</li>
+                                    <li>• Cultural storytelling traditions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-secondary-700 leading-relaxed">The Damascus Fine Arts Academy provided a unique environment where traditional Syrian artistic methods were taught alongside modern European techniques. This dual education would prove crucial in developing the artist's distinctive style, which seamlessly blended classical composition with deeply rooted cultural themes. His professors recognized his particular talent for capturing the essence of Damascus's architectural and social environments.</p>
+                `
+            },
+            'exhibition-1975': {
+                title: '1975 - First Solo Exhibition',
+                content: `
+                    <div class="grid md:grid-cols-2 gap-8 mb-6">
+                        <img src="https://images.pixabay.com/photo/2017/08/06/12/06/people-2591874_1280.jpg" 
+                             alt="Damascus Cultural Center" 
+                             class="w-full h-64 object-cover rounded-lg">
+                        <div>
+                            <h3 class="font-crimson text-xl font-bold text-primary mb-3">Artistic Debut</h3>
+                            <p class="text-secondary-700 mb-4">His first solo exhibition at the Damascus Cultural Center featured 25 paintings focusing on traditional courtyard life, establishing his reputation as a cultural preservationist.</p>
+                            <div class="bg-accent/5 p-4 rounded-lg">
+                                <h4 class="font-semibold text-primary mb-2">Exhibition Highlights:</h4>
+                                <ul class="text-sm text-secondary-600 space-y-1">
+                                    <li>• "Morning Light in the Courtyard"</li>
+                                    <li>• "Jasmine Evening Gathering"</li>
+                                    <li>• "Traditional Tea Ceremony"</li>
+                                    <li>• "Children Playing in the Fountain"</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-secondary-700 leading-relaxed">The exhibition was a critical success, with local art critics praising the artist's ability to capture not just the visual beauty of Damascus courtyards, but their emotional and cultural significance. The paintings resonated deeply with viewers who recognized their own family memories and cultural experiences reflected in the work. This exhibition established the artist's reputation as someone who could bridge the gap between fine art and cultural documentation.</p>
+                `
+            },
+            'masterpiece-1987': {
+                title: '1987 - Masterpiece Period',
+                content: `
+                    <div class="grid md:grid-cols-2 gap-8 mb-6">
+                        <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" 
+                             alt="Artist at Work" 
+                             class="w-full h-64 object-cover rounded-lg">
+                        <div>
+                            <h3 class="font-crimson text-xl font-bold text-primary mb-3">Artistic Maturity</h3>
+                            <p class="text-secondary-700 mb-4">During this period, the artist created his most celebrated works, demonstrating complete mastery of his technique and deepest understanding of his cultural themes.</p>
+                            <div class="bg-accent/5 p-4 rounded-lg">
+                                <h4 class="font-semibold text-primary mb-2">Masterworks Created:</h4>
+                                <ul class="text-sm text-secondary-600 space-y-1">
+                                    <li>• "Morning Light in the Courtyard" (featured work)</li>
+                                    <li>• "Jasmine Evening" series</li>
+                                    <li>• "Damascus Seasons" collection</li>
+                                    <li>• "Family Gatherings" portraits</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-secondary-700 leading-relaxed">The late 1980s represented the pinnacle of the artist's creative output. Having spent over a decade refining his technique and deepening his understanding of Damascus's cultural landscape, he produced works that perfectly balanced technical excellence with emotional depth. "Morning Light in the Courtyard," painted during this period, is considered his masterpiece—a work that captures not just a moment in time, but the eternal spirit of Damascus family life.</p>
+                `
+            },
+            'recognition-1995': {
+                title: '1995 - Cultural Recognition',
+                content: `
+                    <div class="grid md:grid-cols-2 gap-8 mb-6">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" 
+                             alt="Cultural Award Ceremony" 
+                             class="w-full h-64 object-cover rounded-lg">
+                        <div>
+                            <h3 class="font-crimson text-xl font-bold text-primary mb-3">Heritage Preservation Award</h3>
+                            <p class="text-secondary-700 mb-4">Received the Damascus Cultural Heritage Award for his significant contributions to preserving traditional artistic techniques and cultural memory.</p>
+                            <div class="bg-accent/5 p-4 rounded-lg">
+                                <h4 class="font-semibold text-primary mb-2">Recognition For:</h4>
+                                <ul class="text-sm text-secondary-600 space-y-1">
+                                    <li>• Preserving traditional painting techniques</li>
+                                    <li>• Documenting disappearing cultural practices</li>
+                                    <li>• Mentoring young artists</li>
+                                    <li>• Community cultural education</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-secondary-700 leading-relaxed">By 1995, the artist's work had gained recognition not just for its artistic merit, but for its crucial role in cultural preservation. The Damascus Cultural Heritage Award acknowledged his unique contribution to maintaining the visual record of traditional Damascus life. His paintings had become important historical documents, capturing ways of life that were rapidly changing in the modern world.</p>
+                `
+            }
+        };
+
+        // Add event listeners for timeline detail buttons
+        document.querySelectorAll('.timeline-detail-btn').forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const eventKey = button.dataset.event;
+                const details = timelineDetails[eventKey];
+                
+                if (details) {
+                    modalTitle.textContent = details.title;
+                    modalContent.innerHTML = details.content;
+                    modal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        // Close modal
+        closeModal.addEventListener('click', () => {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close modal on backdrop click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
